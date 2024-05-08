@@ -5,19 +5,19 @@
 }
 @font-face {
     font-family: grand;
-    src: url('/fonts/NTF-Grand-Regular.otf'), 
+    src: url('fonts/NTF-Grand-Regular.otf'), 
 }
 @font-face {
     font-family: grandLight;
-    src: url('/fonts/NTF-Grand-Light.ttf'), 
+    src: url('fonts/NTF-Grand-Light.ttf'), 
 }
 @font-face {
     font-family: street;
-    src: url('/fonts/Street\ Wars\ Demo.ttf'), 
+    src: url('fonts/Street\ Wars\ Demo.ttf'), 
 }
 @font-face {
     font-family: trade;
-    src: url('/fonts/FontsFree-Net-Trade-Gothic-Next-Rust-W01-Hv.ttf'), 
+    src: url('fonts/FontsFree-Net-Trade-Gothic-Next-Rust-W01-Hv.ttf'), 
 }
 body{
     font-family: "grandLight";
@@ -175,7 +175,7 @@ ol, ul{
     transform: scaley(1.5);
 }
 .main_frase_caja{
-    background-image: url(/Img/foto_frase_home.png);
+    background-image: url(Img/foto_frase_home.png);
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
