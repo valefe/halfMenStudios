@@ -5,19 +5,19 @@
 }
 @font-face {
     font-family: grand;
-    src: url('/fonts/nTF-Grand-Regular.otf'), 
+    src: url('../fonts/nTF-Grand-Regular.otf'), 
 }
 @font-face {
     font-family: grandLight;
-    src: url('/fonts/nTF-Grand-Light.ttf'), 
+    src: url('../fonts/nTF-Grand-Light.ttf'), 
 }
 @font-face {
     font-family: street;
-    src: url('/fonts/streetWarsDemo.ttf'), 
+    src: url('../fonts/streetWarsDemo.ttf'), 
 }
 @font-face {
     font-family: trade;
-    src: url('/fonts/fontsFree-Net-Trade-Gothic-Next-Rust-W01-Hv.ttf'), 
+    src: url('../fonts/fontsFree-Net-Trade-Gothic-Next-Rust-W01-Hv.ttf'), 
 }
 body{
     font-family: "grandLight";
