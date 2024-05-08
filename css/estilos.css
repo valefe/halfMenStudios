@@ -1,0 +1,944 @@
+:root{
+    --altura_header:100px;
+    --padding_left_right:2rem;
+    --ancho_maximo: 1200px;
+}
+@font-face {
+    font-family: grand;
+    src: url('/fonts/NTF-Grand-Regular.otf'), 
+}
+@font-face {
+    font-family: grandLight;
+    src: url('/fonts/NTF-Grand-Light.ttf'), 
+}
+@font-face {
+    font-family: street;
+    src: url('/fonts/Street\ Wars\ Demo.ttf'), 
+}
+@font-face {
+    font-family: trade;
+    src: url('/fonts/FontsFree-Net-Trade-Gothic-Next-Rust-W01-Hv.ttf'), 
+}
+body{
+    font-family: "grandLight";
+    font-optical-sizing: auto;
+    font-style:normal;
+    font-weight: 100;
+    background-color: #19182e;
+    margin: 0%;
+    padding: 0%;
+    letter-spacing: 1px;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    /*padding: 5%;*/
+}
+a{
+    text-decoration: none;
+}
+ol, ul{
+    list-style: none;
+}
+.header{
+    height:var(--altura_header);
+}
+.navbar{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    background-color:#19182e;
+    padding: 0 var(--padding_left_right);
+    margin: 2% 0%;
+    width: 100%;
+}
+.menu_hamburguesa{
+    display: none;
+}
+.menu_hamburguesa:checked + .ul_links{
+    height: calc(100vh - var(--altura_header));
+
+}
+.list_icon{
+    color: #FAD36E;
+    background-color: #BF6A39;
+    border-radius: 50px;
+    padding: 20%;
+    cursor: pointer;
+    
+}
+.ul_links{
+    width: 100%;
+    background-color:#19182e;
+    position: absolute;
+    top: var(--altura_header);
+    left: 0%;
+    height: 0%;
+    overflow: hidden;
+    /*height: calc(100vh - var(--altura_header));*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    transition: all .3s;
+    z-index: 1;
+    padding: 0;
+}
+.link{
+    font-size: 1.5rem;
+    color: #F5F7F2;
+    
+}
+.li_links{
+    width: 60%;
+    border-bottom: #FAD36E solid 2px;
+    text-align: center;
+    padding-bottom: 5%;
+}
+@media (min-width:768px){
+    .label_hamburguesa{
+        display: none;
+    }
+    .ul_links{
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        gap: 2rem;
+        background-color:#f5f7f200;
+
+    }
+    .link{
+        font-size: 1.5rem;
+        transition: all .3s;
+        padding: .2rem .7rem;
+        color:  #FAD36E;
+        font-weight: 500;
+    }
+    .li_links:hover{
+        border-bottom:  #FAD36E solid 3px;
+        transition: all .15s;
+    }
+    .li_links{
+        width: auto;
+        border-bottom: none;
+        text-align: center;
+        padding-bottom: 0;
+    }
+}
+.main_portada{
+    margin-top: 150px;
+}
+.main_portada_2cajas{
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 5% 0% 5%;
+    
+}
+.main_portada_parrafo{
+    width: 30%;
+}
+.main_portada_palabra{
+    color: #FAD36E;
+    text-align: center;
+    width: 100%;
+    font-size: 210px;
+    margin: 0%;
+    position: relative;
+    font-family: "street";
+    font-weight: 500;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.mascota{
+    position: absolute;
+    top: -100%;
+    right: 30%;
+    width: 20%;
+}
+.main_portada__nombre{
+    text-align: right;
+    padding: 0% 3%;
+    font-size: 30px;
+    font-weight:800;
+    font-family: "trade";
+    text-transform: uppercase;
+    color: #FAD36E;
+    transform: scaley(1.5);
+}
+.main_frase_caja{
+    background-image: url(/Img/foto_frase_home.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: space-between ;
+    height: 850px;
+}
+.main_frase_frase{
+    width: 40%;
+    padding: 5%;
+}
+.frase{
+    font-weight:300;
+    font-size: 30px;
+}
+.autor{
+    text-align: right;
+    font-weight:300;
+    font-style: italic;
+}
+.main_frase_camino{
+    width: 40%;
+    font-family: "gelato-fresco-variable",sans-serif;
+    font-variation-settings: 'wght' 500;
+    font-size: 100px;
+    display: flex;
+    align-items: flex-end;
+
+}
+.titulo{
+    height:fit-content;
+    margin-bottom: 2%;
+    
+}
+.main_acerca_caja{
+    display: flex;
+}
+.main_acerca_foto{
+    padding: 10%;
+    width: 50%;
+}
+.main_acerca_foto img{
+    width: 500px;
+}
+.main_acerca_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    width: 80%;
+    padding-left: 0%;
+    padding-right: 10%;
+    font-size: 20px;
+
+}
+.titulo_acerca{
+    width: 100%;
+    text-align: left;
+    font-size: 40px;
+    font-weight: 500;
+}
+.cv{
+    background-color: #2A4B3F;
+    color: #F5F7F2;
+    border-radius: 50px;
+    padding: 3% 10%;
+    font-size: 25px;
+    cursor: pointer;
+}
+.main_camino_caja{
+    display: flex;
+    width: 100%;
+}
+.main_camino_titulo{
+    width: 50%;
+    padding: 2% 5%;
+    font-family: "gelato-fresco-variable",sans-serif;
+    font-variation-settings: 'wght' 500;
+    font-size: 150px;
+    color: #2A4B3F;
+}
+.titulo_camino{
+    margin: 0%;
+}
+.main_camino_colab{
+    width: 50%;
+    padding: 2% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 20px;
+}
+.calidad{
+    width: 30%;
+    margin-bottom: 5%;
+}
+.imagenes_proyectos{
+    width: 90%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.trabajos_portafolio{
+    width: 100%;
+}
+.boton_proyectos{
+    background-color: #19182e;
+    color: #F5F7F2;
+    border-radius: 50px;
+    padding: 1% 3%;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 5%;
+}
+.main_capitulo{
+    width: 100%;
+    background-color: #BF6A39;
+    color: #19182e;
+    font-family: "trade",sans-serif;
+    font-size: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 0%;
+
+}
+.main_capitulo h5{
+    font-weight: 100;
+    margin: 10% 0% 5% 0%;
+}
+.capitulo{
+    background-color: #19182e;
+    color:#ffffff;
+    border-radius: 50px;
+    padding: 1% 3%;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 5%;
+    font-weight: 900;
+    font-family: "trade";
+}
+#footer{
+    background-color:#BF6A39;
+    padding: 5% 10%;
+    margin-top: 10%;
+}
+.footer_caja{
+    border-bottom: #19182e solid 5px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5%;
+}
+.social-media img{
+    width: 100%;
+
+}
+.social-media{
+    display: flex;
+    width: 20%;
+}
+.social-media a{
+    width:fit-content;
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+    border-radius: 50px;
+    border: solid 2px;
+    padding: 5%;
+    color: #19182e;
+}
+/*VIDA*/
+.capitulo_portada{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: flex-end;
+}
+.main_portada_vida{
+    color: #2A4B3F;
+    width: 50%;
+    font-size: 200px;
+    margin: 0%;
+    font-family: "gelato-fresco-variable",sans-serif;
+    font-variation-settings: 'wght' 450;
+}
+.main_frase_cajaVida{
+    background-image: url(/Img/foto_frase_vida.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: space-between ;
+    height: 600px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 15%;
+}
+.main_frase_fraseVida{
+    width: 30%;
+    padding: 5%;
+
+}
+.frase_secundaria_caja{
+    width: 90%;
+    padding: 5%;
+}
+.frase_secundaria{ 
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 80px;
+   line-height: 10rem;
+   color:#22342d;
+}
+.texto_resaltado{
+    color: #BF935E;
+}
+.titulo_ruta_caja{
+    width: 100%;
+    text-align: center;
+}
+.titulo_ruta{
+    font-family: "gelato-fresco-variable",sans-serif;
+    color: #2A4B3F;
+    font-size: 200px;
+    font-variation-settings: 'wght' 400;
+    margin: 0%;
+    margin-top: 10%;
+}
+.titulo_ruta2{
+    color: #2A4B3F;
+    font-size: 180px;
+    margin: 0%;
+    margin-bottom: 10%;
+    letter-spacing: -15px;
+}
+.cajas_ruta_grande{
+    display: flex;
+    padding: 2% 10%;
+}
+.foto_ruta{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.descripcion_ruta{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+    justify-content: center
+}
+.foto_ruta img{
+    width: 70%;
+    
+}
+.titulo_punto_caja{
+    width: 100%;
+    padding: 5%;
+}
+.titulo_punto{
+    font-family: "gelato-fresco-variable",sans-serif;
+    color: #2A4B3F;
+    font-size: 200px;
+    font-variation-settings: 'wght' 100;
+    margin: 0%;
+    margin-top: 10%;
+}
+.titulo_punto2{
+    color: #2A4B3F;
+    font-size: 130px;
+    margin: 0%;
+    margin-bottom: 10%;
+    text-transform: uppercase;
+}
+.descripcion_ruta h2{
+    font-weight: 400;
+    margin: 0%;
+}
+/*HOBBIES*/
+.capitulo_caja{
+    text-align: right;
+    padding: 0 5%;
+}
+.capitulo_portada_hobbies{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: flex-end;
+}
+.main_portada_hobbies{
+    color: #2A4B3F;
+    width: 70%;
+    font-size: 200px;
+    margin: 0%;
+    font-family: "gelato-fresco-variable",sans-serif;
+    font-variation-settings: 'wght' 450;
+}
+.main_frase_cajaHobbies{
+    background-image: url(/Img/foto_frase_hobbies.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: space-between ;
+    height: 600px;
+    justify-content: flex-end;
+    align-items: flex-end;
+   
+}
+.main_frase_cajaHobbies .autor{
+    margin-right: 40%;
+}
+.titulo_musica_caja{
+    width: 90%;
+    padding: 5%;
+}
+.preferencias_caja{
+    width: 80%;
+    font-size: 20px;
+    display: flex;
+    justify-content: right;
+}
+.preferencias_texto{
+    width: 30%;
+}
+.grid_musica{
+    padding: 1% 5%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2rem;
+}
+.videojuegos_texto{
+    width: 70%;
+}
+.videojuegos_caja{
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: right;
+    padding-top: 5%;
+}
+.videojuegos_imagenes_caja{
+    display: flex;
+    padding: 5%;
+    justify-content: space-between;
+}
+.videojuegos_imagenes{
+    width: 30%;
+}
+.videojuegos_imagenes img{
+    width: 100%;
+}
+/*TRABAJOS*/
+.main_portada_proyectos{
+    color: #2A4B3F;
+    width: 100%;
+    font-size: 200px;
+    margin: 0%;
+    font-family: "gelato-fresco-variable",sans-serif;
+    font-variation-settings: 'wght' 450;
+}
+.main_portada_proyectos h1{
+    margin: 10% 0%;
+}
+.main_frase_cajaProyectos{
+    background-image: url(/Img/foto_frase_trabajos.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: space-between ;
+    height: 850px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.main_frase_cajaProyectos .autor{
+    margin-right: 20%;
+}
+.titulo_proyectos_caja{
+    width: 90%;
+    padding: 5%;
+    display: flex;
+    align-items: flex-end;
+}
+.imagen_logo_proyectos{
+    width: 15%;
+}
+.imagen_logo_proyectos img{
+    width: 100%;
+}
+.titulo_proyectos{
+    color: #2A4B3F;
+    width: 90%;
+    font-size: 100px;
+    margin: 0%;
+    font-family: "gelato-fresco-variable",sans-serif;
+    font-variation-settings: 'wght' 450;
+    text-align: right;
+    padding: 0% 5%;
+}
+.titulo_proyectos h3{
+    margin-bottom: 0%;
+}
+/*CONTACTO*/
+.info_contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info_contacto_txt{
+    padding: 0;
+    width: 30%;
+}
+.info_contacto_txt h3{
+    font-weight: 400;
+}
+.info_contacto_img{
+    padding: 5%;
+    width: 50%;
+}
+.info_contacto_img img{
+    width: 100%;
+}
+
+/*imagenes celular*/
+.celular_Img{
+    display: none;
+}
+
+/*POP UP*/
+  
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 1s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color:#558171;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+
+/* TABLETA */
+
+@media screen and (max-width: 1024px) {
+    .main_portada_palabra {
+        font-size: 140px;
+        margin-top: 10%;
+    }
+    .mascota{
+        width: 15%;
+        right: 30%;
+        top: -80%;
+    }
+    .habilidades{
+        margin: 2%;
+        font-size: 20px;
+    }
+    .main_frase_camino{
+        font-size: 70px;
+    }
+    .main_frase_caja{
+        height: auto;
+        margin: 15% 0;
+    }
+    .main_acerca_foto img {
+        width: 100%;
+    }
+    .main_acerca_foto {
+        width: 40%;
+    }
+    .main_camino_titulo{
+        font-size: 100px;
+    }
+    .social-media {
+        width: 30%;
+    }
+    .main_portada_vida{
+        font-size: 140px;
+    }
+    .capitulo_portada {
+        width: 40%;
+    }
+    .frase_secundaria {
+        font-size: 60px;
+        line-height: 6rem;
+    }
+    .main_frase_cajaVida {
+        height: 300px;
+    }
+    .titulo_ruta{
+        font-size:150px;
+    }
+    .titulo_ruta2{
+        font-size:120px;
+        letter-spacing: -5px
+    }
+    .capitulo_portada p{
+        font-size: 20px;
+    }
+    .titulo_punto{
+        font-size: 150px;
+    }
+    .titulo_punto2{
+        font-size: 90px;
+        margin-bottom: 0%;
+    }
+    .titulo_punto_caja {
+        width: auto;
+    }
+    .main_portada_hobbies {
+        font-size: 140px;
+        text-align: right;
+    }
+    .main_frase_cajaHobbies{
+        height: 400px;
+    }
+    .preferencias_caja {
+        width: 100%;
+    }
+    .preferencias_texto {
+        width: 50%;
+    }
+    .main_portada_proyectos {
+        font-size: 140px;
+    }
+    .main_frase_cajaProyectos{
+        height: 500px;
+    }
+    .main_frase_fraseVida {
+        width: 50%;
+    }
+    .header_svg__logo{
+        width: 40%;
+    }
+}
+
+
+/* CELULAR */
+
+@media screen and (max-width: 600px){
+    .main_portada_2cajas{
+        display: block;
+        width: 90%;
+    }
+    .main_portada_parrafo {
+        width: 100%;
+    }
+    .main_portada_palabra {
+        font-size: 100px;
+    }
+    .main_portada {
+        margin-top: 50px;
+    }
+    .main_portada_adjetivos{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .habilidades {
+        font-size: 15px;
+    }
+    .mascota {
+        width: 20%;
+        left: 20%;
+        top: 17%;
+    }
+    .frase {
+        font-weight: 300;
+        font-size: 14px;
+        margin: 0%;
+    }
+    .main_frase_camino {
+        font-size: 30px;
+    }
+    .main_frase_frase {
+        width: 50%;
+        padding: 5%;
+    }
+    .autor {
+        font-size: 14px;
+        margin: 0%;
+    }
+    .main_acerca_caja {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30%;
+    }
+    .main_acerca_info {
+        padding-left: 0%;
+        padding-right: 0;
+        text-align: center;
+    }
+    .titulo_acerca {
+        text-align: center;
+    }
+    .main_acerca_foto {
+        padding: 0%;
+        width: 80%;
+    }
+    .main_camino_caja {
+        display: block;
+    }
+    .main_camino_titulo {
+        font-size: 40px;
+        width: 90%;
+        text-align: center;
+    }
+    .main_camino_colab {
+        width: 90%;
+        align-items: center;
+    }
+    .main_capitulo {
+        font-size: 100px;
+    }
+    .logo_oroz{
+        width: 20%;
+    }
+    .logo_oroz img{
+        width: 100%;
+    }
+    .main_portada_vida {
+        width: 100%;
+        font-size: 100px;
+        text-align: center;
+    }
+    .main_portada_vida h1 {
+        margin-bottom: 10%;
+    }
+    .capitulo_portada {
+        width: 100%;
+    }
+    .main_frase_cajaVida {
+        height: 100px;
+    }
+    .frase_secundaria {
+        font-size: 30px;
+        line-height: 2.5rem;
+    }
+    .titulo_ruta {
+        font-size: 70px;
+    }
+    .titulo_ruta2 {
+        font-size: 50px;
+        letter-spacing: -5px;
+    }
+    .cajas_ruta_grande {
+        flex-direction: column;
+    }
+    .foto_ruta {
+        width: 100%;
+    }
+    .descripcion_ruta{
+        width: 100%;
+    }
+    .titulo_punto {
+        font-size: 60px;
+    }
+    .titulo_punto2 {
+        font-size: 40px;
+        margin-bottom: 0%;
+    }
+    .celular_Img{
+        display: flex;
+    }
+    .noCelular_Img{
+        display: none;
+    }
+    .capitulo_portada_hobbies {
+        width: 100%;
+    }
+    .main_portada_hobbies {
+        font-size: 80px;
+        text-align: center;
+        width: 100%;
+    }
+    .main_frase_cajaHobbies {
+        height: 200px;
+    }
+    .preferencias_texto {
+        width: 100%;
+    }
+    .grid_musica {
+        grid-template-columns: 100%;
+        gap: 2rem;
+    }
+    .videojuegos_texto {
+        width: 100%;
+    }
+    .main_portada_proyectos {
+        font-size: 60px;
+    }
+    .main_frase_cajaProyectos {
+        height: 200px;
+    }
+    .titulo_proyectos{
+        font-size: 50px;
+    }
+    .info_contacto{
+        flex-direction: column;
+    }
+    .info_contacto_txt {
+        padding: 0;
+        width: 90%;
+    }
+    .info_contacto_img {
+        width: 90%;
+    }
+    .capitulo{
+        font-size: 18px;
+    }
+}
