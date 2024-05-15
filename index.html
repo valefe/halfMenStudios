@@ -15,7 +15,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Protest+Revolution&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js" type="text/javascript"></script>
         <!--fuentes de adobe-->
         <link rel="stylesheet" href="https://use.typekit.net/wga0hpu.css">
         <!--estilos-->
@@ -23,86 +33,96 @@
     </head>
 
     <body>
-        <header class="header">
-            <nav class="navbar">
-                <img src="img/logo.png" alt="logo" class="header_svg__logo">            
-
-                <label class="label_hamburguesa" for="menu_hamburguesa">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="list_icon" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-                    </svg>
-                </label>
-                <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
-                <ul class="ul_links">
-                    <li class="li_links">
-                        <a class="link" href="index.html" class="header_nav_btn__item">Home</a>
-                    </li>
-                    <li class="li_links">
-                        <a class="link" href="#" class="header_nav_btn__item">Proceso</a>
-                    </li>
-                    <li class="li_links">
-                        <a class="link" href="#" class="header_nav_btn__item">Extras</a>
-                    </li>
-                    <li class="li_links">
-                        <a class="link" href="#" class="header_nav_btn__item">Halfmen Studios</a>
-                    </li>
-                    <li class="li_links">
-                        <a class="link" href="#" class="header_nav_btn__item">Agradecimientos</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <!--Portada-->
-            <section class="main_portada contenedor">
-                <div class="main_portada_2cajas">
-                    <p class="main_portada_parrafo"></p>
-                    <div class="main_portada_adjetivos">
-                        <h2 class="habilidades"></h2>
-                        <h2 class="habilidades"></h2>
-                        <h2 class="habilidades"></h2>
-                        <h2 class="habilidades"></h2>
+        <div class="loader">
+            <div class="loader-content">
+                <img src="img/logo.png" alt="">
+                <div id="loader-counter">0</div>
+            </div>
+            <div class="backgrounds">
+              <div class="background blue"></div>
+              <div class="background blue"></div>
+              <div class="background blue"></div>
+              <div class="background blue"></div>
+              <div class="background blue"></div>
+            </div>
+        </div>
+        <div class="content">
+            <header class="header">
+                <nav class="navbar">
+                    <img src="img/logo.png" alt="logo" class="header_svg__logo">            
+    
+                    <label class="label_hamburguesa" for="menu_hamburguesa">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="list_icon" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                        </svg>
+                    </label>
+                    <input class="menu_hamburguesa" type="checkbox" name="" id="menu_hamburguesa">
+                    <ul class="ul_links">
+                        <li class="li_links actual">
+                            <a class="link" href="index.html" class="header_nav_btn__item">Home</a>
+                        </li>
+                        <li class="li_links">
+                            <a class="link" href="proceso.html" class="header_nav_btn__item">Proceso</a>
+                        </li>
+                        <li class="li_links">
+                            <a class="link" href="extras.html" class="header_nav_btn__item">Otros proyectos</a>
+                        </li>
+                        <li class="li_links">
+                            <a class="link" href="nosotros.html" class="header_nav_btn__item">Halfmen Studios</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <!--Portada-->
+                <section class="main_portada contenedor">
+                    <div class="main_portada_titulo">
+                        <h1 class="main_portada_palabra">El último trato</h1>  
+                    </div>
+                    <h2 class="main_portada__nombre">Halfmen Studios</h2>
+                </section>
+    
+                
+    
+                <!--acerca de mi-->
+    
+                <!--Comic-->
+    
+    
+                <section class="main_camino contenedor">
+    
+                    <div id="contenedorSlider_sastreria">
+                        <div class="center">
+                            <div class="sliderC"><img src="img/portada_elUltimoTrato.jpg" alt=""></div>
+                            <div class="sliderC"><img src="img/pag1_elUltimoTrato.jpg" alt=""></div>
+                            <div class="sliderC"><img src="img/pag2_elUltimoTrato.jpg" alt=""></div>
+                            <div class="sliderC"><img src="img/pag3_elUltimoTrato.jpg" alt=""></div>
+                            <div class="sliderC"><img src="img/pag4_elUltimoTrato.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </section>
+    
+                <!--pase capitulo-->
+                <section class="main_capitulo contenedor">
+                    <h5 class="titulo_capitulo"> Proceso</h5>
+                    <a href="proceso.html" class="capitulo"> VER</a>
+                </section>
+            </main>
+    
+            <footer id="footer">
+                <div class="footer_caja">
+                    <div class="logo_oroz">
+                        <h2 class="main_portada__nombre">Halfmen Studios</h2>
+                    </div>
+                    <div class="social-media">
+                        <a href="" class="social-media-icon"><img src="img/instagramIcon.png" alt=""></a>
+                        <a href="" class="social-media-icon"><img src="img/behance.png" alt=""></a>
+                        <a href="" class="social-media-icon"><img src="img/linkedin.png" alt=""></a>
                     </div>
                 </div>
-                <div class="main_portada_titulo">
-                    <h1 class="main_portada_palabra">El ultimo trato</h1>  
-                </div>
-                <h2 class="main_portada__nombre">Halfmen Studios</h2>
-            </section>
-
-            <!--Frase-->
-
-            <!--acerca de mi-->
-
-            <!--Un camino largo-->
-            <section class="main_camino contenedor">
-                <div class="imagenes_proyectos">
-                    <img src="img/portada_elUltimoTrato.jpg" alt="trabajo 1" class="trabajos_portafolio">
-                    <img src="img/pag1_elUltimoTrato.jpg" alt="trabajo 2" class="trabajos_portafolio">
-                    <img src="img/pag2_elUltimoTrato.jpg" alt="trabajo 3" class="trabajos_portafolio">
-                    <img src="img/pag3_elUltimoTrato.jpg" alt="trabajo 4" class="trabajos_portafolio">
-                    <img src="img/pag4_elUltimoTrato.jpg" alt="trabajo 5" class="trabajos_portafolio">
-                </div>
-            </section>
-
-            <!--pase capitulo-->
-            <section class="main_capitulo contenedor">
-                <h5 class="titulo_capitulo"> Proceso</h5>
-                <button type="#" class="capitulo">VER</button>
-            </section>
-        </main>
-
-        <footer id="footer">
-            <div class="footer_caja">
-                <div class="logo_oroz">
-                    <img src="" alt="">
-                </div>
-                <div class="social-media">
-                    <a href="" class="social-media-icon"><img src="img/instagramIcon.png" alt=""></a>
-                    <a href="" class="social-media-icon"><img src="img/behance.png" alt=""></a>
-                    <a href="" class="social-media-icon"><img src="img/linkedin.png" alt=""></a>
-                </div>
-            </div>
-        </footer>
+            </footer>        
+        </div>
+        
+        <script src="js/script.js"></script>
     </body>
 </html>
