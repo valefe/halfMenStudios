@@ -58,7 +58,7 @@ ol, ul{
     width: 100%;
 }
 .header_svg__logo{
-    width: 100%;
+    height: 100%;
 }
 .menu_hamburguesa{
     display: none;
